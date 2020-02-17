@@ -21,7 +21,7 @@ public class JwtService {
 
         //expired after 1 hour
         Calendar expiryDate = Calendar.getInstance();
-        expiryDate.add(Calendar.SECOND, 10);
+        expiryDate.add(Calendar.HOUR, 1);
 
         return Jwts.builder()
                 .setId("" + user.getId())
