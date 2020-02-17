@@ -7,7 +7,7 @@ public class EnvHelper {
 
     public static String get(String key) {
         if (dotenv == null) {
-            dotenv = Dotenv.load();
+            dotenv = Dotenv.configure().ignoreIfMissing().load();
         }
 
         return dotenv.get(key);
